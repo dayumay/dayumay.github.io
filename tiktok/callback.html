@@ -2,7 +2,15 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TikTok sign-in</title><link rel="stylesheet" href="../style.css"></head>
 <body><main>
-<h1>TikTok connected</h1>
-<p>Copy the full address from the address bar and paste it into Dayumay Clip Studio to finish the sign-in.</p>
-<p class="muted">This page does not store or send anything.</p>
-</main></body></html>
+<h1>Connecting TikTok…</h1>
+<p>You are being sent back to Dayumay Clip Studio on this computer.</p>
+<p class="muted">If nothing happens, make sure the posting screen is running, then copy the full address from the
+address bar into Dayumay Clip Studio. This page does not store or send anything.</p>
+</main>
+<script>
+  // Hand the sign-in result back to the posting screen running locally on the owner's computer.
+  if (location.search.includes("code=") || location.search.includes("error=")) {
+    location.replace("http://localhost:8765/tiktok/callback" + location.search);
+  }
+</script>
+</body></html>
