@@ -1,19 +1,88 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dayumay Clip Studio</title><link rel="stylesheet" href="style.css"></head>
-<body><main>
-<h1>Dayumay Clip Studio</h1>
-<p class="muted">A private tool for one creator.</p>
-<p>Dayumay Clip Studio is a personal desktop tool that turns approved livestream highlights into short vertical videos
-(9:16) with readable captions, and publishes them to the creator's own TikTok, YouTube and Instagram accounts.</p>
-<h2>How it works</h2>
-<ol>
-<li>The creator joins clipping campaigns in which streamers allow and pay for clips of their streams.</li>
-<li>The tool cuts the allowed source material into short vertical videos and adds captions and the required credit.</li>
-<li>YouTube: the finished Shorts are uploaded to the creator's own channel on a schedule through the YouTube Data API.</li>
-<li>TikTok: the creator opens the tool's posting screen, sees their account, reviews each video and caption, chooses the
-privacy and interaction settings, and confirms. Only then is the video sent through the TikTok Content Posting API.</li>
-</ol>
-<p>The tool is used only by its owner. It does not offer accounts to other people and does not collect data from viewers.</p>
-<nav><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
-</main></body></html>
+<title>Dayumay Clip Studio – vertical clip publishing for creators</title>
+<meta name="description" content="Dayumay Clip Studio turns approved livestream highlights into vertical short videos and publishes them to the creator's own TikTok, YouTube and Instagram accounts.">
+<link rel="icon" href="favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="img/icon-256.png" alt="" width="36" height="36"> Dayumay Clip Studio</a>
+  <nav><a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</div></header>
+
+<main>
+<section class="hero">
+  <img class="hero-icon" src="img/icon-256.png" alt="Dayumay Clip Studio icon" width="120" height="120">
+  <h1>Dayumay Clip Studio</h1>
+  <p class="lead">Turn approved livestream highlights into clean vertical shorts – and publish them to your own TikTok,
+  YouTube and Instagram accounts with full control over every post.</p>
+</section>
+
+<section id="features">
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card"><h3>Finds the best moments</h3><p>Scans approved stream clips and official campaign footage for the
+      strongest moments – loudness, speech and scene changes – instead of random cuts.</p></div>
+    <div class="card"><h3>Vertical 9:16 editing</h3><p>Cuts on natural scene and sentence edges, keeps the streamer's
+      facecam large, adds readable captions and the required credit.</p></div>
+    <div class="card"><h3>Safety check</h3><p>Every clip is checked before posting. Clips with unsafe content or misleading
+      titles are rejected automatically.</p></div>
+    <div class="card"><h3>Campaign rules built in</h3><p>Required captions, hashtags, disclosures (#Ad) and logos of each
+      clipping campaign are applied exactly as the brand asks.</p></div>
+    <div class="card"><h3>You confirm every TikTok post</h3><p>The posting screen shows your account, the video and caption.
+      You choose who can view it and the interaction settings, then confirm.</p></div>
+    <div class="card"><h3>Your accounts only</h3><p>The tool publishes only to the accounts its owner connects. No viewer data
+      is collected and nothing is shared with third parties.</p></div>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><b>Join a clipping campaign.</b> Streamers and game publishers allow and pay for clips of their content.</li>
+    <li><b>Clip Studio prepares the shorts.</b> It downloads only the approved source material and renders vertical videos.</li>
+    <li><b>Connect your accounts.</b> Sign in with TikTok (Login Kit), Google (YouTube Data API) and Instagram. Tokens stay on
+      the owner's computer.</li>
+    <li><b>Review and publish.</b> On the posting screen you check each video and caption, pick the privacy level and confirm.
+      Only then is the video sent through the TikTok Content Posting API.</li>
+  </ol>
+</section>
+
+<section id="screens">
+  <h2>Screenshots</h2>
+  <div class="shots">
+    <figure><img src="img/posting-screen.jpg" alt="Posting screen with video preview, caption, privacy and interaction settings">
+      <figcaption>Posting screen: preview, caption, privacy and interaction settings before publishing.</figcaption></figure>
+    <figure><img src="img/tiktok-consent.jpg" alt="TikTok authorization screen for Dayumay Clip Studio">
+      <figcaption>Connecting a TikTok account with TikTok Login Kit.</figcaption></figure>
+  </div>
+</section>
+
+<section id="platforms">
+  <h2>Supported platforms</h2>
+  <ul class="pills"><li>TikTok – Content Posting API</li><li>YouTube Shorts – YouTube Data API v3</li><li>Instagram Reels – Instagram API</li></ul>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <details><summary>Who can use Dayumay Clip Studio?</summary><p>It is a personal tool run by its owner for the owner's own
+    creator accounts. It does not offer sign-ups to other people.</p></details>
+  <details><summary>Does it post without my approval?</summary><p>No TikTok video is published without the owner reviewing it on
+    the posting screen and confirming. The owner chooses the privacy level for every post.</p></details>
+  <details><summary>Which content is used?</summary><p>Only footage the rights holder allows for clipping, such as official
+    campaign folders and the streamer's own clips, always with the required credit.</p></details>
+  <details><summary>What data is stored?</summary><p>Only the access tokens needed to publish to the connected accounts, stored
+    locally on the owner's computer. See the <a href="privacy.html">Privacy Policy</a>.</p></details>
+  <details><summary>How do I disconnect an account?</summary><p>Revoke access in your TikTok, Google or Instagram security
+    settings at any time; the local token stops working immediately.</p></details>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Questions about Dayumay Clip Studio: message the owner on GitHub –
+    <a href="https://github.com/dayumay">github.com/dayumay</a>.</p>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Dayumay Clip Studio · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></div></footer>
+</body></html>
